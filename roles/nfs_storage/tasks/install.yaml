@@ -263,6 +263,7 @@
       ansible.builtin.file:
         path: /tmp/nfs-smoke-test/.nfs-test-probe
         state: "{{ item }}"
+        mode: "0644"
       loop: [touch, absent]
       delegate_to: "{{ groups['kube_node'] | first }}"
       become: true
