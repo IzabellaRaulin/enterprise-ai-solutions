@@ -1,4 +1,4 @@
-# Intel® Enterprise for AI Solutions
+# Intel® AI for Enterprise Solutions
 
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
 [![Platform: Intel Xeon](https://img.shields.io/badge/Platform-Intel%C2%AE%20Xeon%C2%AE-0068B5)](https://www.intel.com/xeon)
@@ -13,17 +13,17 @@
 
 ---
 
-## What is Intel® Enterprise for AI Solutions?
+## What is Intel® AI for Enterprise Solutions?
 
 Enterprise AI needs more than a model endpoint. Teams need to connect LLM inference, RAG, and agentic workflows, along with security, routing, and observability.
 
-Intel® Enterprise for AI Solutions wires these pieces together in a pre-integrated, customizable Kubernetes stack optimized for Intel® Xeon® processors.
+Intel® AI for Enterprise Solutions wires these pieces together in a pre-integrated, customizable Kubernetes stack optimized for Intel® Xeon® processors.
 
 A single installer script, `es_auto_installer.sh`, takes bare-metal nodes through Kubernetes provisioning, platform services (networking, security, observability), model serving, and AI gateway setup — delivering a production-ready AI platform with OpenAI-compatible endpoints in one run.
 
 The end result: teams get a secured, load-balanced stack where they can immediately serve LLM models, run RAG pipelines, and monitor everything through a unified gateway. Start with defaults, then configure or extend as needed.
 
-> Want the full picture? See [Architecture](docs/reference/architecture.md) and [Meet AI Solutions](docs/meet/meet.md).
+> Want the full picture? See [Architecture](docs/reference/architecture.md) and [Meet AI for Enterprise Solutions](docs/meet/meet.md).
 
 ## Architecture
 
@@ -39,7 +39,7 @@ The stack installs in four ordered layers, in the order they are deployed:
 **Request flow:** a request enters through the Envoy AI Gateway, is authenticated against Keycloak (or a LiteLLM virtual key), and is routed to the matching model-serving backend. Every layer's health and latency is visible in the built-in Grafana / Prometheus / Loki / Tempo stack.
 
 <p align="center">
-  <img src="docs/assets/architecture.png" alt="Intel Enterprise for AI Solutions layer diagram: infrastructure layer (Kubernetes, storage) at the base; platform layer (Istio, Envoy Gateway, PostgreSQL, Keycloak, MinIO, observability) above it; inference layer (Envoy AI Gateway, KServe, vLLM and OpenVINO Model Server) above that; and an opt-in application layer (RAG pipelines, UI, vector databases) on top, with client requests flowing through the gateway to the serving layer" />
+  <img src="docs/assets/architecture.png" alt="Intel AI for Enterprise Solutions layer diagram: infrastructure layer (Kubernetes, storage) at the base; platform layer (Istio, Envoy Gateway, PostgreSQL, Keycloak, MinIO, observability) above it; inference layer (Envoy AI Gateway, KServe, vLLM and OpenVINO Model Server) above that; and an opt-in application layer (RAG pipelines, UI, vector databases) on top, with client requests flowing through the gateway to the serving layer" />
 </p>
 
 > See the [Architecture deep-dive](docs/reference/architecture.md) for the full component list, execution flow, and cross-repo layering.
@@ -142,7 +142,7 @@ Licensed under the [Apache License, Version 2.0](LICENSE).
 - [GitHub Repository](https://github.com/intel/enterprise-ai-solutions)
 - [Intel® Enterprise for AI Inference (inference layer)](https://github.com/intel/enterprise-inference)
 - [Intel® AI for Enterprise RAG (RAG layer)](https://github.com/intel/enterprise-rag)
-- [Meet AI Solutions](docs/meet/meet.md)
+- [Meet AI for Enterprise Solutions](docs/meet/meet.md)
 - [Architecture](docs/reference/architecture.md)
 
 ---
